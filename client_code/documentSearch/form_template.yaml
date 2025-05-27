@@ -102,7 +102,7 @@ components:
   - components:
     - layout_properties: {}
       name: label_12
-      properties: {text: Document Journey Statuses}
+      properties: {bold: true, text: Document Journey Statuses}
       type: Label
     layout_properties: {grid_position: 'NHHARA,VEGJEP'}
     name: flow_panel_5
@@ -111,12 +111,19 @@ components:
   - components:
     - layout_properties: {grid_position: 'JYRKKB,JDNSYE'}
       name: repeating_panel_platforms
-      properties: {item_template: documentSearch.document_search_platform}
+      properties: {item_template: documentSearch.document_search_platform, spacing_above: none, spacing_below: none}
       type: RepeatingPanel
     data_bindings: []
     layout_properties: {grid_position: 'ZCGRSR,BHCSJR'}
     name: column_panel_1
-    properties: {role: null, visible: false}
+    properties:
+      col_spacing: small
+      role: null
+      spacing:
+        margin: ['0', null, '0', null]
+      spacing_above: none
+      spacing_below: none
+      visible: false
     type: ColumnPanel
   layout_properties: {slot: default}
   name: content_panel
