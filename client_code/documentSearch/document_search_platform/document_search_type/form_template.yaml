@@ -1,20 +1,68 @@
 components:
 - components:
-  - name: label_doc_type
-    properties: {}
-    type: Label
+  - event_bindings: {click: toggle_button_click}
+    layout_properties: {}
+    name: toggle_button
+    properties:
+      align: center
+      foreground: black
+      icon: fa:angle-right
+      icon_align: right
+      spacing:
+        padding: [null, '0', null, '0']
+      text: ''
+    type: Button
+  - components:
+    - name: label_1
+      properties: {align: center, bold: true, text: 'Type:'}
+      type: Label
+    - name: label_doc_type
+      properties: {}
+      type: Label
+    - name: label_2
+      properties: {bold: true, text: 'Count:'}
+      type: Label
+    - name: item_count
+      properties: {}
+      type: Label
+    - layout_properties: {}
+      name: label_3
+      properties: {bold: true, text: 'Total Shipped Quantity:'}
+      type: Label
+    - name: total_ship_qty
+      properties: {}
+      type: Label
+    layout_properties: {expand: true}
+    name: flow_panel_2
+    properties:
+      background: grey
+      spacing:
+        padding: [null, '10', null, '10']
+      spacing_above: none
+      spacing_below: none
+    type: FlowPanel
   layout_properties: {grid_position: 'SAXKDJ,ADYGXR'}
   name: flow_panel_1
-  properties: {}
+  properties:
+    align: left
+    gap: none
+    spacing:
+      margin: ['0', null, '0', null]
+    spacing_above: none
+    spacing_below: none
+    vertical_align: middle
   type: FlowPanel
 - components:
   - layout_properties: {grid_position: 'VGCALH,EJDHVG'}
     name: repeating_panel_records
-    properties: {item_template: documentSearch.document_search_platform.document_search_type.document_search_line_items}
+    properties: {item_template: documentSearch.document_search_platform.document_search_type.document_search_line_items, visible: true}
     type: RepeatingPanel
   layout_properties: {grid_position: 'UPRENP,BDXPXS'}
   name: column_panel_1
-  properties: {}
+  properties:
+    spacing:
+      padding: [null, '10', null, '15']
+    visible: false
   type: ColumnPanel
 container: {type: ColumnPanel}
 is_package: true
