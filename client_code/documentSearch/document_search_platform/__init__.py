@@ -11,3 +11,4 @@ class document_search_platform(document_search_platformTemplate):
     self.checkbox_status.checked = True
     self.column_panel_2.role = 'vertical-line'
     self.checkbox_status.role = 'status-complete'
+    self.flow_panel_1.role = "scrollbar"
