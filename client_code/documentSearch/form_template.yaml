@@ -1,0 +1,128 @@
+components:
+- components:
+  - components:
+    - layout_properties: {}
+      name: label_1
+      properties: {bold: true, font_size: 21, text: Document Search}
+      type: Label
+    layout_properties: {grid_position: 'DHOHRV,TMYFJI'}
+    name: flow_panel_1
+    properties: {}
+    type: FlowPanel
+  - components:
+    - layout_properties: {}
+      name: label_2
+      properties: {icon: 'fa:search'}
+      type: Label
+    - event_bindings: {pressed_enter: search_box_pressed_enter}
+      layout_properties: {expand: true}
+      name: search_box
+      properties: {background: white, foreground: black, placeholder: 'Enter Document ID(eg: doc-123)'}
+      type: TextBox
+    - event_bindings: {click: button_1_click}
+      layout_properties: {}
+      name: button_1
+      properties: {background: green, text: search}
+      type: Button
+    data_bindings:
+    - {code: 'self.item[''search-card'']', property: role, writeback: false}
+    layout_properties: {grid_position: 'GZZIKL,TQUIGK'}
+    name: flow_panel_2
+    properties:
+      align: left
+      background: white
+      spacing:
+        padding: [null, '5', null, '5']
+      vertical_align: middle
+    type: FlowPanel
+  - components:
+    - name: label_3
+      properties: {}
+      type: Label
+    layout_properties: {grid_position: 'JWSBAH,GCTOJS'}
+    name: flow_panel_3
+    properties:
+      spacing:
+        padding: [null, '10', null, '10']
+      visible: false
+    type: FlowPanel
+  - components:
+    - components:
+      - layout_properties: {}
+        name: label_4
+        properties: {bold: true}
+        type: Label
+      - name: label_5
+        properties: {}
+        type: Label
+      layout_properties: {expand: true}
+      name: flow_panel_6
+      properties: {align: center}
+      type: FlowPanel
+    - components:
+      - layout_properties: {}
+        name: label_6
+        properties: {bold: true}
+        type: Label
+      - name: label_7
+        properties: {}
+        type: Label
+      layout_properties: {expand: true}
+      name: flow_panel_7
+      properties: {align: center}
+      type: FlowPanel
+    - components:
+      - layout_properties: {}
+        name: label_8
+        properties: {bold: true}
+        type: Label
+      - name: label_9
+        properties: {}
+        type: Label
+      layout_properties: {expand: true}
+      name: flow_panel_8
+      properties: {align: center}
+      type: FlowPanel
+    - components:
+      - layout_properties: {}
+        name: label_10
+        properties: {bold: true}
+        type: Label
+      - name: label_11
+        properties: {}
+        type: Label
+      layout_properties: {expand: true}
+      name: flow_panel_9
+      properties: {align: center}
+      type: FlowPanel
+    layout_properties: {grid_position: 'ZJFJHJ,OPZOEO'}
+    name: flow_panel_4
+    properties: {align: center, border: 1px solid gray, visible: false}
+    type: FlowPanel
+  - components:
+    - layout_properties: {}
+      name: label_12
+      properties: {text: Document Journey Statuses}
+      type: Label
+    layout_properties: {grid_position: 'NHHARA,VEGJEP'}
+    name: flow_panel_5
+    properties: {visible: false}
+    type: FlowPanel
+  - components:
+    - layout_properties: {grid_position: 'JYRKKB,JDNSYE'}
+      name: repeating_panel_platforms
+      properties: {item_template: documentSearch.document_search_platform}
+      type: RepeatingPanel
+    data_bindings: []
+    layout_properties: {grid_position: 'ZCGRSR,BHCSJR'}
+    name: column_panel_1
+    properties: {role: null, visible: false}
+    type: ColumnPanel
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

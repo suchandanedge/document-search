@@ -1,0 +1,20 @@
+components:
+- components:
+  - name: label_doc_type
+    properties: {}
+    type: Label
+  layout_properties: {grid_position: 'SAXKDJ,ADYGXR'}
+  name: flow_panel_1
+  properties: {}
+  type: FlowPanel
+- components:
+  - layout_properties: {grid_position: 'VGCALH,EJDHVG'}
+    name: repeating_panel_records
+    properties: {item_template: documentSearch.document_search_platform.document_search_type.document_search_line_items}
+    type: RepeatingPanel
+  layout_properties: {grid_position: 'UPRENP,BDXPXS'}
+  name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+container: {type: ColumnPanel}
+is_package: true

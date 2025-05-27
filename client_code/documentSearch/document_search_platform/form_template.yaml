@@ -1,0 +1,61 @@
+components:
+- components:
+  - components:
+    - data_bindings:
+      - {code: 'self.item[''status-complete'']', property: role, writeback: false}
+      layout_properties: {grid_position: 'SBAZAG,PYLIQP'}
+      name: checkbox_status
+      properties:
+        align: center
+        allow_indeterminate: false
+        enabled: false
+        spacing:
+          margin: ['1', null, '0', null]
+          padding: ['5', '0', '5', '25']
+        spacing_above: none
+        spacing_below: none
+        text: ''
+      type: CheckBox
+    layout_properties: {width: 44}
+    name: column_panel_2
+    properties:
+      spacing:
+        margin: ['0', null, null, null]
+      spacing_above: none
+      spacing_below: none
+    type: ColumnPanel
+  - components:
+    - layout_properties: {grid_position: 'BCRSAW,TCIVQE'}
+      name: label_platform
+      properties: {}
+      type: Label
+    - components:
+      - layout_properties: {expand: true, width: 522}
+        name: repeating_panel_types
+        properties: {item_template: documentSearch.document_search_platform.document_search_type}
+        type: RepeatingPanel
+      layout_properties: {grid_position: 'KMGIZT,BAJVUZ'}
+      name: flow_panel_2
+      properties: {}
+      type: FlowPanel
+    data_bindings: []
+    layout_properties: {expand: true, width: 283}
+    name: column_panel_1
+    properties:
+      spacing:
+        margin: ['0', null, '0', null]
+      spacing_above: none
+      spacing_below: none
+    type: ColumnPanel
+  data_bindings: []
+  layout_properties: {grid_position: 'QTSYZN,RWIRFA'}
+  name: flow_panel_1
+  properties:
+    spacing:
+      margin: ['0', null, '0', null]
+    spacing_above: none
+    spacing_below: none
+    vertical_align: full
+  type: FlowPanel
+container: {type: ColumnPanel}
+is_package: true
