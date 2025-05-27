@@ -8,6 +8,7 @@ components:
   properties:
     background: '#D3D3D3'
     spacing:
+      margin: [null, null, '-4', null]
       padding: [null, '20', null, '20']
     spacing_above: none
     spacing_below: none

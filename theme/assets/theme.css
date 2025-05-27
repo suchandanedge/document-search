@@ -93,9 +93,9 @@ a:active:not(disabled), a:focus:not(disabled){
   letter-spacing: 2px;
   
   border: 0;
-  background-color: transparent;
+  background-color: white;
   background-image: none;
-  color: %color:On Background%;
+  color: black;
   text-shadow: none;
   box-shadow: none;
   -webkit-box-shadow: none;
@@ -104,15 +104,15 @@ a:active:not(disabled), a:focus:not(disabled){
 }
 
 .btn:hover, .btn-default:hover {
-  color: %color:On Background%;
-  background-color: %color:Light Overlay 1%;
+  color: white;
+  background-color: white;
   outline: none;
   background-image: none;
 }
 
 .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus {
-  color: %color:On Background%;
-  background-color: %color:Light Overlay 2%;
+  color: white;
+  background-color: white;
   outline: none;
   outline-offset: 0px;
 }
