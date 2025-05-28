@@ -7,7 +7,7 @@ class document_search_type(document_search_typeTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     db_data_records = self.item['records']
-    self.label_doc_type.text = self.item['doc_type_name']
+    self.label_doc_type.text = self.item['doc_id']
     self.repeating_panel_records.items = db_data_records
     item_count = len(self.item['records'])
     self.item_count.text = item_count

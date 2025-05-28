@@ -20,30 +20,28 @@ class documentSearch(documentSearchTemplate):
     if isinstance(result, dict) and "error" in result:
       alert(result["error"])
       return
+
     grouped_data = {}
     for row in result:
-      platform = row.get("platform", "Unknown")
-      doc_type = row.get("type", "Unknown")
+      app_name = row.get("app_name", "Unknown")
+      doc_id = row.get("document_id", "Unknown")
+      key = (app_name, doc_id)
 
-      if platform not in grouped_data:
-        grouped_data[platform] = {}
+      if key not in grouped_data:
+        grouped_data[key] = []
 
-      if doc_type not in grouped_data[platform]:
-        grouped_data[platform][doc_type] = []
+      grouped_data[key].append(row)
 
-      grouped_data[platform][doc_type].append(row)
     platform_rows = []
-    for platform, types_dict in grouped_data.items():
-      type_rows = []
-      for doc_type, records in types_dict.items():
-        type_rows.append({
-          "doc_type_name": doc_type,
-          "records": records
-        })
+    for (app_name, doc_id), records in grouped_data.items():
       platform_rows.append({
-        "platform_name": platform,
-        "types": type_rows
+        "app_name": app_name,   # You can rename this throughout if needed
+        "types": [{
+          "doc_id": doc_id,  # Again, rename in UI if needed
+          "records": records
+        }]
       })
+
     self.repeating_panel_platforms.items = platform_rows
 
   def search_box_pressed_enter(self, **event_args):

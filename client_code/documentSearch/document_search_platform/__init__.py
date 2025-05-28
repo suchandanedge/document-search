@@ -7,10 +7,10 @@ class document_search_platform(document_search_platformTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.image_1.role = 'image-style'
-    self.label_platform.text = self.item['platform_name']
+    self.label_platform.text = self.item['app_name']
     self.repeating_panel_types.items = self.item['types']
     # self.checkbox_status.checked = True
-    if self.item['platform_name'] == "Mainfreight":
+    if self.item['app_name'] == "Mainfreight":
       self.image_1.source = "_/theme/mainfreight.png"
       self.image_1.background = 'white'
     else:

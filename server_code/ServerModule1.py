@@ -39,8 +39,8 @@ def document_search(order_number):
       "ship_qty": "12",
       "ship_date": "2025-02-03",
       "posted_at": "None",
-      "type": "Order",
-      "platform": "Mainfreight"
+      "document_id": "11442",
+      "app_name": "Mainfreight"
     },
     {
       "order_number": "SOH Clear 2.3.25",
@@ -50,8 +50,8 @@ def document_search(order_number):
       "ship_qty": "2",
       "ship_date": "2025-02-03",
       "posted_at": "None",
-      "type": "Invoice",
-      "platform": "Mainfreight"
+      "document_id": "11442",
+      "app_name": "Mainfreight"
     },
     {
       "order_number": "SOH Clear 2.3.25",
@@ -61,8 +61,8 @@ def document_search(order_number):
       "ship_qty": "1",
       "ship_date": "2025-02-03",
       "posted_at": "None",
-      "type": "Capture",
-      "platform": "NetSuite"
+      "document_id": "11442-1",
+      "app_name": "NetSuite"
     },
     {
       "order_number": "SOH Clear 2.3.25",
@@ -72,8 +72,8 @@ def document_search(order_number):
       "ship_qty": "1",
       "ship_date": "2025-02-03",
       "posted_at": "None",
-      "type": "Order",
-      "platform": "Mainfreight"
+      "document_id": "11442-1",
+      "app_name": "Mainfreight"
     },
     {
       "order_number": "SOH Clear 2.3.25",
@@ -83,8 +83,8 @@ def document_search(order_number):
       "ship_qty": "5",
       "ship_date": "2025-02-03",
       "posted_at": "None",
-      "type": "Invoice",
-      "platform": "Mainfreight"
+      "document_id": "11442-2",
+      "app_name": "Mainfreight"
     }
     ]
     return result
