@@ -9,13 +9,7 @@ class document_search_type(document_search_typeTemplate):
     db_data_records = self.item['records']
     self.label_doc_type.text = self.item['doc_id']
     self.repeating_panel_records.items = db_data_records
-    item_count = len(self.item['records'])
-    self.item_count.text = item_count
-    total_ship_qty = sum(
-      int(row.get("ship_qty", 0)) if str(row.get("ship_qty", "")).isdigit() else 0
-      for row in db_data_records
-    )
-    self.total_ship_qty.text = total_ship_qty
+    self.date.text= self.item['records'][0]['log_time']
 
   def toggle_button_click(self, **event_args):
     if self.toggle_button.icon == 'fa:angle-right':

@@ -19,18 +19,13 @@ components:
     - name: label_doc_type
       properties: {}
       type: Label
-    - name: label_2
-      properties: {bold: true, text: 'Count:'}
-      type: Label
-    - name: item_count
-      properties: {}
+    - layout_properties: {}
+      name: label_2
+      properties: {bold: true, text: 'Date:', visible: true}
       type: Label
     - layout_properties: {}
-      name: label_3
-      properties: {bold: true, text: 'Total Shipped Quantity:'}
-      type: Label
-    - name: total_ship_qty
-      properties: {}
+      name: date
+      properties: {visible: true}
       type: Label
     layout_properties: {expand: true}
     name: flow_panel_2
