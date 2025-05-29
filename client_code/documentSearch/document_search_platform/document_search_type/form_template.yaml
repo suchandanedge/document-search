@@ -70,10 +70,20 @@ components:
       spacing_below: none
       vertical_align: middle
     type: FlowPanel
-  - layout_properties: {grid_position: 'OOYNZF,NMORBX'}
-    name: repeating_panel_1
-    properties: {item_template: documentSearch.document_search_platform.document_search_type.RowTemplate1}
-    type: RepeatingPanel
+  - components:
+    - name: repeating_panel_records
+      properties: {item_template: documentSearch.document_search_platform.document_search_type.RowTemplate1}
+      type: RepeatingPanel
+    layout_properties: {grid_position: 'CERHUO,FACDQY'}
+    name: data_grid_1
+    properties:
+      columns:
+      - {data_key: column_1, id: JKSDUP, title: Column 1}
+      - {data_key: column_2, id: VJQQOR, title: Column 2}
+      - {data_key: column_3, id: OJLQEN, title: Column 3}
+      - {data_key: column_4, id: HQKHZN, title: Column 4}
+      - {data_key: column_5, id: WLQJVB, title: Column 5}
+    type: DataGrid
   layout_properties: {grid_position: 'UPRENP,BDXPXS'}
   name: column_panel_1
   properties:
