@@ -12,17 +12,23 @@ class document_search_type(document_search_typeTemplate):
     # self.repeating_panel_records.items = db_data_records
     flattened_records = []
     for record in db_data_records:
-      raw_payload = record.get('payload', '{}')
+      raw_payload = record.get('m_payload', '{}')
       payload = json.loads(raw_payload)
-      payload['item_name'] = record.get('item_name', '')
-      flattened_records.append(payload)
+      inward_lines = payload.get('inwardLines', [])
+      for line in inward_lines:
+        line_entry = {
+          "item_name": line.get("item_name", ""),
+          "units": line.get("units", ""),
+          "lineNo": line.get("lineNo", ""),
+          "product_code": line.get("product", {}).get("code", "")
+        }
+        flattened_records.append(line_entry)
     print(flattened_records)
     self.data_grid_1.columns = [
       {"id": "item_name", "title": "Item Name", "data_key": "item_name"},
-      {"id": "customer", "title": "Customer", "data_key": "customer"},
-      {"id": "warehouse", "title": "Warehouse", "data_key": "warehouse"},
-      {"id": "inwardReference", "title": "Inward Ref", "data_key": "inwardReference"},
-      {"id": "inwardLines", "title": "Inward Lines", "data_key": "inwardLines"},
+      {"id": "units", "title": "Units", "data_key": "units"},
+      {"id": "lineNo", "title": "Line No.", "data_key": "lineNo"},
+      {"id": "product_code", "title": "Inward Ref", "data_key": "product_code"},
     ]
     self.repeating_panel_records.items = flattened_records
     self.date.text= self.item['records'][0]['log_date']
