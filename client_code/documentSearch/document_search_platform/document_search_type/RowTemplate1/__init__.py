@@ -6,5 +6,10 @@ class RowTemplate1(RowTemplate1Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    row = self.item
+    display_lines = []
 
-    # Any code you write here will run before the form opens.
+    for key, value in row.items():
+      display_lines.append(f'"{key}": "{value}"')
+
+      self.db_items.text = "\n".join(display_lines)

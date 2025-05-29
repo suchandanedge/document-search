@@ -31,61 +31,82 @@ def document_search(order_number):
     # conn.db_execute(query)
     # result = conn.db_AllRowJson()
     result = [
-    {
-      "order_number": "SOH Clear 2.3.25",
-      "line_no": "1",
-      "item_id": "101151",
-      "displayname": "Doodles x CAMP Playing Cards",
-      "ship_qty": "12",
-      "ship_date": "2025-02-03",
-      "posted_at": "None",
-      "document_id": "11442",
-      "app_name": "Mainfreight"
-    },
-    {
-      "order_number": "SOH Clear 2.3.25",
-      "line_no": "1",
-      "item_id": "101151",
-      "displayname": "Doodles x CAMP Playing Cards",
-      "ship_qty": "2",
-      "ship_date": "2025-02-03",
-      "posted_at": "None",
-      "document_id": "11442",
-      "app_name": "Mainfreight"
-    },
-    {
-      "order_number": "SOH Clear 2.3.25",
-      "line_no": "1",
-      "item_id": "101151",
-      "displayname": "Doodles x CAMP Playing Cards",
-      "ship_qty": "1",
-      "ship_date": "2025-02-03",
-      "posted_at": "None",
-      "document_id": "11442-1",
-      "app_name": "NetSuite"
-    },
-    {
-      "order_number": "SOH Clear 2.3.25",
-      "line_no": "1",
-      "item_id": "101151",
-      "displayname": "Doodles x CAMP Playing Cards",
-      "ship_qty": "1",
-      "ship_date": "2025-02-03",
-      "posted_at": "None",
-      "document_id": "11442-1",
-      "app_name": "Mainfreight"
-    },
-    {
-      "order_number": "SOH Clear 2.3.25",
-      "line_no": "1",
-      "item_id": "101151",
-      "displayname": "Doodles x CAMP Playing Cards",
-      "ship_qty": "5",
-      "ship_date": "2025-02-03",
-      "posted_at": "None",
-      "document_id": "11442-2",
-      "app_name": "Mainfreight"
-    }
+          {
+            "log_id" : 11322,
+            "app_name" : "mainfreight_po",
+            "component_name" : "send_orders",
+            "function_name" : "send_orders",
+            "is_error" : True,
+            "status_code" : 404,
+            "error_text" : "",
+            "document_id" : "11442",
+            "log_time" : "2025-05-29T07:37:33.030Z",
+            "response" : "{}",
+            "payload" : "{\"customer\": {\"code\": \"7346087\"}, \"warehouse\": {\"code\": \"56\"}, \"inwardLines\": [{\"units\": \"5000\", \"lineNo\": \"1\", \"product\": {\"code\": \"74059\"}}], \"inwardReference\": \"11442\", \"inwardReference1\": 18699016, \"receiverReference\": \"\"}",
+            "details" : "{}",
+            "parent_key" : "11442",
+            "system_type" : "",
+            "log_date" : "2025-05-29",
+            "base_document_id" : "11442",
+            "item_name" : "item74059"
+          },
+          {
+            "log_id" : 11345,
+            "app_name" : "mainfreight_po",
+            "component_name" : "send_orders",
+            "function_name" : "send_orders",
+            "is_error" : True,
+            "status_code" : 404,
+            "error_text" : "",
+            "document_id" : "11442-1",
+            "log_time" : "2025-05-29T07:38:34.192Z",
+            "response" : "{}",
+            "payload" : "{\"customer\": {\"code\": \"7346087\"}, \"warehouse\": {\"code\": \"56\"}, \"inwardLines\": [{\"units\": \"5000\", \"lineNo\": \"1\", \"product\": {\"code\": \"74060\"}}], \"inwardReference\": \"11442\", \"inwardReference1\": 18699016, \"receiverReference\": \"\"}",
+            "details" : "{}",
+            "parent_key" : "11442",
+            "system_type" : "",
+            "log_date" : "2025-05-29",
+            "base_document_id" : "11442",
+            "item_name" : "item74060"
+          },
+          {
+            "log_id" : 11350,
+            "app_name" : "mainfreight_po",
+            "component_name" : "send_orders",
+            "function_name" : "send_orders",
+            "is_error" : True,
+            "status_code" : 404,
+            "error_text" : "",
+            "document_id" : "11442-1",
+            "log_time" : "2025-05-29T07:39:01.758Z",
+            "response" : "{}",
+            "payload" : "{\"customer\": {\"code\": \"7346087\"}, \"warehouse\": {\"code\": \"56\"}, \"inwardLines\": [{\"units\": \"5000\", \"lineNo\": \"1\", \"product\": {\"code\": \"74060\"}}], \"inwardReference\": \"11442\", \"inwardReference1\": 18699016, \"receiverReference\": \"\"}",
+            "details" : "{}",
+            "parent_key" : "11442",
+            "system_type" : "",
+            "log_date" : "2025-05-29",
+            "base_document_id" : "11442",
+            "item_name" : "item74060"
+          },
+          {
+            "log_id" : 11351,
+            "app_name" : "mainfreight_po",
+            "component_name" : "send_orders",
+            "function_name" : "send_orders",
+            "is_error" : True,
+            "status_code" : 404,
+            "error_text" : "",
+            "document_id" : "11442-2",
+            "log_time" : "2025-05-29T07:39:12.029Z",
+            "response" : "{}",
+            "payload" : "{\"customer\": {\"code\": \"7346087\"}, \"warehouse\": {\"code\": \"56\"}, \"inwardLines\": [{\"units\": \"5000\", \"lineNo\": \"1\", \"product\": {\"code\": \"74061\"}}], \"inwardReference\": \"11442\", \"inwardReference1\": 18699016, \"receiverReference\": \"\"}",
+            "details" : "{}",
+            "parent_key" : "11442",
+            "system_type" : "",
+            "log_date" : "2025-05-29",
+            "base_document_id" : "11442",
+            "item_name" : "item74061"
+          }
     ]
     return result
   except Exception as e:
